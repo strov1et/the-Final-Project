@@ -1,0 +1,75 @@
+main {
+  .background {
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 2000px;
+    position: relative;
+  }
+
+  .plant {
+    width: 90%;
+    max-width: 512px;
+    height: auto;
+    aspect-ratio: 1 / 1; // Keeps it square-ish
+    background-image: url(../images/frame.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      position: absolute;
+      bottom: 185px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .infoWrapper {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include dFlex(flex-start, center, 0, 15px);
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1rem;
+
+      h3 {
+        color: $primaryColor;
+        font-size: $fontSizeS;
+      }
+
+      p {
+        color: $secondaryColor;
+        font-size: $fontSizeL;
+      }
+
+      button {
+        width: 100%;
+        max-width: 217px;
+        height: 64px;
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid $secondaryColor;
+        border-radius: 15px;
+        font-size: $fontSizeNormal;
+        color: $secondaryColor;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $secondaryColor;
+          color: white;
+        }
+      }
+    }
+  }
+}
