@@ -1,38 +1,48 @@
-.headerDiv {
-  background-color: #192116;
-  @include dFlex(space-between, center, 0, 0);
-  padding-top: 40px;
+header {
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  
 
-  .logoWrapper {
-    @include dFlex(flex-start, center, 7px, 0);
+  top: 0;
+  left: 0;
 
-    p {
-      color: $primaryColor;
-      font-size: $fontSizeNormal;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-  }
+  .headerDiv {
+    background-color: #192116;
+    @include dFlex(space-between, center, 0, 0);
 
-  .navLinks {
-    ul {
-      @include dFlex(center, center, 40px, 0);
-    }
+    .logoWrapper {
+      @include dFlex(flex-start, center, 7px, 0);
 
-    a {
-      font-size: $fontSizeS;
-      color: $secondaryColor;
-      font-family: "Inter", sans-serif;
-      text-decoration: none;
-      transition: font-family 0.3s ease, color 0.3s ease;
+      p {
+        color: $primaryColor;
+        font-size: $fontSizeNormal;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
     }
 
-    ul li a:hover {
-      font-family: "Merriweather", serif;
-      color: #4caf50;
+    .navLinks {
+      ul {
+        @include dFlex(center, center, 40px, 0);
+      }
+
+      a {
+        font-size: $fontSizeS;
+        color: $secondaryColor;
+        font-family: "Inter", sans-serif;
+        text-decoration: none;
+        transition: font-family 0.3s ease, color 0.3s ease;
+      }
+
+      ul li a:hover {
+        font-family: "Merriweather", serif;
+        color: #4caf50;
+      }
     }
-  }
-  .icons{
-    @include dFlex(flex-start,center,10px,0)
+    .icons {
+      @include dFlex(flex-start, center, 10px, 0);
+    }
   }
 }
