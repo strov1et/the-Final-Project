@@ -6,12 +6,12 @@ main {
     background-repeat: no-repeat;
     width: 100%;
     height: 2500px;
-    position: relative;
+  
   }
   .mainSection {
     @include dFlex(space-between, flex-start, 0, 0);
     flex-wrap: wrap;
-    margin-top: 170px;
+    
   }
   .leftSide {
     @include dFlex(space-between, flex-start, 0, 350px);
@@ -215,7 +215,7 @@ main {
     }
   .fasciatiaSection{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
   }
   }
 }
